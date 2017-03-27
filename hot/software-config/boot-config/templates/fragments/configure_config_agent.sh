@@ -21,7 +21,7 @@ mkdir -p $oac_templates/var/run/heat-config
 echo "{{deployments}}" > $oac_templates/var/run/heat-config/heat-config
 
 # os-refresh-config scripts directory
-# Original was /usr/libexec/os-refresh-config
+# Original was /opt/stack/os-config-refresh
 orc_scripts=/usr/libexec/os-refresh-config
 for d in pre-configure.d configure.d migration.d post-configure.d; do
     install -m 0755 -o root -g root -d $orc_scripts/$d
